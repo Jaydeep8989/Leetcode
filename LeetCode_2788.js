@@ -12,6 +12,7 @@
 var splitWordsBySeparator = function(words, separator) {
     let result = [];
     for (let i= 0; i < words.length; i++){
+        // let subs = words[i].split(separator);
         let subs = words[i].split(`${separator}`);
         subs.forEach((e) => {
               if (e.length !== 0){
