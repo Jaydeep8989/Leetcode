@@ -25,16 +25,16 @@ var groupAnagrams = function (strs) {
     // if (strs.length === 1) {
     //     result.push(strs[0]);
     // } else {
-        strs.forEach((str) => {
-            let str_sort = (str.split("").sort().join(""));
-            if(str_sort in group){
-                group[str_sort] = [...group[str_sort],str];
-            }else{
-                group[str_sort] = [str];
-            }
-            // console.log(a);
-            // result.push(a);
-        })
+    strs.forEach((str) => {
+        let str_sort = str.split("").sort().join("");
+        if (str_sort in group) {
+            group[str_sort] = [...group[str_sort], str];
+        } else {
+            group[str_sort] = [str];
+        }
+        // console.log(a);
+        // result.push(a);
+    });
     for (let data in group) result.push(group[data]);
     return result;
 };
